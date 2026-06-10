@@ -69,7 +69,7 @@ export const stravaApi = {
     const { page = 1, perPage = 200, year = new Date().getFullYear() } = options || {}
     if (year < 2010 || year >= new Date().getFullYear() + 1) return []
     const [beforeDate, afterDate] = [Math.floor(new Date(`${year + 1}-01-01`).getTime() / 1000).toString(), Math.floor(new Date(`${year}-01-01`).getTime() / 1000).toString()]
-    const baseUrl = "https://strava.com/api/v3/athlete/activities"
+    const baseUrl = "https://www.strava.com/api/v3/athlete/activities"
     const headers = {
       Authorization: `Bearer ${token}`
     }
